@@ -13,7 +13,7 @@ class Produk:
         if jumlah_terjual <= self.stok:
             self.stok -= jumlah_terjual
         else:
-            print(f"⚠️ Stok tidak cukup untuk {self.nama}.")
+            print(f" Stok tidak cukup untuk {self.nama}.")
 
 class Material(Produk):
     def __init__(self, id_produk, nama, harga_beli, harga_jual, stok, jenis_bahan):
@@ -111,3 +111,4 @@ class Inventori:
         with open("data_inventori.json", "w") as f:
             json.dump(data, f, indent=4)
         print("💾 Data inventori berhasil disimpan ke 'data_inventori.json'.")
+
